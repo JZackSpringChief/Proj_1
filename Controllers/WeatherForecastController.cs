@@ -29,4 +29,11 @@ public class WeatherForecastController : ControllerBase
         })
         .ToArray();
     }
+    [HttpGet]
+    [Route("/hello")]
+    public async Task<ActionResult> Hello()
+    {
+        var hello = "Hello World";
+        return Ok(hello);
+    }
 }
