@@ -27,6 +27,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseSession(); //uses cookie data from line 10;
+
 app.MapControllers();
 
 app.Run();
