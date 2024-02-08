@@ -7,12 +7,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //adds cookie and temp storage of data
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromSeconds(20);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
-})
+// builder.Services.AddSession(options =>
+// {
+//     options.IdleTimeout = TimeSpan.FromSeconds(20);
+//     options.Cookie.HttpOnly = true;
+//     options.Cookie.IsEssential = true;
+// });
 
 var app = builder.Build();
 
@@ -27,7 +27,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseSession(); //uses cookie data from line 10;
+// app.UseSession(); //uses cookie data from line 10;
 
 app.MapControllers();
 
